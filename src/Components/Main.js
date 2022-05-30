@@ -2,11 +2,11 @@ import {NewPostCard} from "./NewPostCard";
 import {FeedCard} from "./FeedCard";
 import { useState } from "react";
 export const Main = () => {
-  const [newPostText, setNewPostText] = useState("")
+  const [newPostObj, setNewPostObj] = useState({postText: '', postAudioUrl: ''});
   const [postsArray, setPostsArray] = useState([])
   return (
     <main>
-      <NewPostCard newPostText={newPostText}setNewPostText={setNewPostText} setPostsArray={setPostsArray}/>
+      <NewPostCard newPostObj={newPostObj}setNewPostObj={setNewPostObj} setPostsArray={setPostsArray}/>
       <FeedCard postsArray={postsArray} setPostsArray={setPostsArray}/>
     </main>
   );
