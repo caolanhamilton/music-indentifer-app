@@ -1,4 +1,4 @@
-
+import React from 'react'
 export const NewPostCard = ({newPostObj, setNewPostObj, setPostsArray}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,16 +13,23 @@ export const NewPostCard = ({newPostObj, setNewPostObj, setPostsArray}) => {
 
     return (
         <section className="NewPostCard">
+            <h2>New post:</h2>
           <form onSubmit={handleSubmit}>
-            <textarea
+            <label>
+                Write a comment to provide more information about the song you want to find:
+                <br></br>
+                <textarea
                 className="postBodyInput"
                 value={newPostObj.postText}
                 name="postText"
                 onChange={handleChange}
                 required
                 />
+            </label>
+            <br></br>
             <label>
                 Enter a link to an audio file you want to identify:
+                <br></br>
                 <input 
                 className="postAudioUrl"
                 value={newPostObj.postAudioUrl}
@@ -31,7 +38,7 @@ export const NewPostCard = ({newPostObj, setNewPostObj, setPostsArray}) => {
                 >
                 </input>
             </label>
-            <button type="submit" className="add">
+            <button type="submit" className="button-64">
                     Post
             </button>
            </form>

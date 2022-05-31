@@ -1,6 +1,7 @@
+import React from 'react'
 import {NewPostCard} from "./NewPostCard";
 import {FeedCard} from "./FeedCard";
-import { useState } from "react";
+import {useState} from "react";
 export const Main = () => {
   const [newPostObj, setNewPostObj] = useState({postText: '', postAudioUrl: ''});
   const [postsArray, setPostsArray] = useState([])
